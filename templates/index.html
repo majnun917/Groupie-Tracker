@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/css/styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie-Tracker</title>
+</head>
+
+<body>
+    <h1>
+        <a href="/">Welcome to Groupie-Tracker,<br>When The Night Begins to Shine</a>
+    </h1>
+
+    <h2 class="title">Artists Catalog</h2>
+        <div class="grid">
+            <div class="container">
+                {{range .}}
+                <a href="/artistInfo?ArtistName={{.Name}}" class="card">
+                    <img src="{{.Image}}" alt="{{.Name}}" title="{{.Name}}" style="width: 100%;">
+                    <div class="descript">
+                        <h3><b>{{.Name}}</b></h3>
+                        <p style="text-decoration: none;"> Creation Date: {{.CreationDate}}</p>
+                    </div>
+                </a>
+                {{end}}
+            </div>
+        </div>
+        
+</body>
+
+</html>

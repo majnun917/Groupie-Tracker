@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/css/styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie-Tracker</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">Welcome to Groupie-Tracker,<br>When The Night Begins to Shine</a></h1>
+        <img src="{{.A.Image}}" alt="{{.A.Name}}" style="align-items: center;">
+    </header>
+
+    <main>
+        <h2>{{.A.Name}}</h2>
+        <table>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <ul>
+                        {{ range $value := .A.Members }}
+                        <li><a href="{{ printf "https://en.wikipedia.org/wiki/%s" $value }}">{{ $value }}</a></li>
+                        {{ end }}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Date Founded</th>
+                <td>{{.A.CreationDate}}</td>
+            </tr>
+            <tr>
+                <th>Release of First Album</th>
+                <td>{{.A.FirstAlbum}}</td>
+            </tr>
+            <tr>
+                <th>Concert Dates and Location</th>
+                <td>
+                    <ul>
+                        {{ range $key, $value := .R.DatesLocations}}
+                        {{ range $value}}
+                        <li>
+                            <span class="key">
+                                {{ $key}}
+                            </span>
+                            : {{.}}
+                        </li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
