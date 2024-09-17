@@ -67,9 +67,9 @@ The program's algorithm follow several key steps:
 
 ## Authors
 
-- [Ndiasse Dieye](https://learn.zone01oujda.ma/git/ndieye)
-- [Otchoun Agiel](https://learn.zone01oujda.ma/git/aotchoun)
-- [Abdelilah Sadiqui](https://learn.zone01oujda.ma/git/asadiqui)
+- ***Ndiasse Dieye***
+- ***Otchoun Agiel***
+- ***Abdelilah Sadiqui***
 
 ## License
 
